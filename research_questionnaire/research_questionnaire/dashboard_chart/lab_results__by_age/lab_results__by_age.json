@@ -1,0 +1,59 @@
+{
+ "chart_name": "Lab results  by age",
+ "chart_type": "Report",
+ "creation": "2024-07-07 01:13:23.766533",
+ "custom_options": "{\"x_field\": \"age\", \"chart_type\": \"Bar\", \"y_axis_fields\": [{\"idx\": 1, \"__islocal\": true, \"name\": \"row 1\", \"y_field\": \"count\"}, {\"idx\": 2, \"__islocal\": true, \"name\": \"row 2\", \"y_field\": \"hb\"}, {\"idx\": 3, \"__islocal\": true, \"name\": \"row 3\", \"y_field\": \"pcv\"}, {\"idx\": 4, \"__islocal\": true, \"name\": \"row 4\", \"y_field\": \"rbc\"}, {\"idx\": 5, \"__islocal\": true, \"name\": \"row 5\", \"y_field\": \"wbc\"}, {\"idx\": 6, \"__islocal\": true, \"name\": \"row 6\", \"y_field\": \"plt\"}, {\"idx\": 7, \"__islocal\": true, \"name\": \"row 7\", \"y_field\": \"mcv\"}, {\"idx\": 8, \"__islocal\": true, \"name\": \"row 8\", \"y_field\": \"mch\"}, {\"idx\": 9, \"__islocal\": true, \"name\": \"row 9\", \"y_field\": \"mchc\"}, {\"idx\": 10, \"__islocal\": true, \"name\": \"row 10\", \"y_field\": \"rdw\"}], \"y_fields\": [\"count\", \"hb\", \"pcv\", \"rbc\", \"wbc\", \"plt\", \"mcv\", \"mch\", \"mchc\", \"rdw\"], \"colors\": [null, null, null, null, null, null, null, null, null, null]}",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "filters_json": "{}",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "modified": "2024-07-07 01:32:24.233809",
+ "modified_by": "Administrator",
+ "module": "Research Questionnaire",
+ "name": "Lab results  by age",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "report_name": "Questionnaire Report",
+ "roles": [],
+ "time_interval": "Yearly",
+ "timeseries": 0,
+ "timespan": "Last Year",
+ "type": "Bar",
+ "use_report_chart": 0,
+ "x_field": "age",
+ "y_axis": [
+  {
+   "y_field": "count"
+  },
+  {
+   "y_field": "hb"
+  },
+  {
+   "y_field": "pcv"
+  },
+  {
+   "y_field": "rbc"
+  },
+  {
+   "y_field": "wbc"
+  },
+  {
+   "y_field": "plt"
+  },
+  {
+   "y_field": "mcv"
+  },
+  {
+   "y_field": "mch"
+  },
+  {
+   "y_field": "mchc"
+  },
+  {
+   "y_field": "rdw"
+  }
+ ]
+}
