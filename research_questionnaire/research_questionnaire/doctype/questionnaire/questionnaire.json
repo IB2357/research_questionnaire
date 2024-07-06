@@ -1,0 +1,311 @@
+{
+ "actions": [],
+ "autoname": "format:{number_of_sample}",
+ "creation": "2024-07-05 17:06:44.588770",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_0",
+  "html_zssm",
+  "number_of_sample",
+  "section_break_1",
+  "hb",
+  "pcv",
+  "rbc",
+  "wbc",
+  "plt",
+  "mcv",
+  "mch",
+  "mchc",
+  "rdw",
+  "section_break_2",
+  "age",
+  "residence",
+  "occupation",
+  "income_average_monthly",
+  "section_break_3",
+  "number_of_children",
+  "gestational_age",
+  "spacing_between_pregnancies",
+  "section_break_4",
+  "has_health_problems",
+  "history_of_abortion",
+  "bleeding_on_current_pregnant",
+  "section_break_5",
+  "ironfolic_acid_supplementation",
+  "regularity_ironfolic_acid_supplementation",
+  "vegetables",
+  "regularity_vegetables",
+  "fruits",
+  "regularity_fruits",
+  "meat",
+  "regularity_meat",
+  "drinking_tea_or_coffee_with_meals_daily",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "hb",
+   "fieldtype": "Float",
+   "label": "HB (g/dl)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "pcv",
+   "fieldtype": "Float",
+   "label": "PCV (%)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "rbc",
+   "fieldtype": "Float",
+   "label": "RBC",
+   "precision": "2"
+  },
+  {
+   "fieldname": "wbc",
+   "fieldtype": "Float",
+   "label": "WBC",
+   "precision": "2"
+  },
+  {
+   "fieldname": "plt",
+   "fieldtype": "Float",
+   "label": "Plt",
+   "precision": "2"
+  },
+  {
+   "fieldname": "mcv",
+   "fieldtype": "Float",
+   "label": "MCV (fl)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "mch",
+   "fieldtype": "Float",
+   "label": "MCH (Pg)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "mchc",
+   "fieldtype": "Float",
+   "label": "MCHC",
+   "precision": "2"
+  },
+  {
+   "fieldname": "rdw",
+   "fieldtype": "Float",
+   "label": "RDW",
+   "precision": "2"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Select",
+   "label": "Age",
+   "options": "\n17-26\n27-36\n37-46"
+  },
+  {
+   "fieldname": "residence",
+   "fieldtype": "Select",
+   "label": "Residence",
+   "options": "\nSana'a city\nOther areas"
+  },
+  {
+   "fieldname": "occupation",
+   "fieldtype": "Select",
+   "label": "Occupation",
+   "options": "\nHousewife\nStudent\nGovernment or private employed"
+  },
+  {
+   "fieldname": "income_average_monthly",
+   "fieldtype": "Select",
+   "label": "Income average monthly (YR)",
+   "options": "\nLess than 50,000\n50,000-100,000\n100,001-200,000\n200,001-300,000"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "Hematology Lab. results:"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Sociodemographic characteristics:"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "The obstetric and health characteristics during the current pregnancy:"
+  },
+  {
+   "fieldname": "number_of_children",
+   "fieldtype": "Select",
+   "label": "Number of children",
+   "options": "\n0\n1-2\n3-4\n\u2265 5"
+  },
+  {
+   "fieldname": "gestational_age",
+   "fieldtype": "Select",
+   "label": "Gestational age (trimester)",
+   "options": "\nFirst trimester\nSecond trimester\nThird trimester"
+  },
+  {
+   "fieldname": "spacing_between_pregnancies",
+   "fieldtype": "Select",
+   "label": "Spacing between pregnancies",
+   "options": "\n1-2 years\n3-4 years\n\u2265 5 years"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break",
+   "label": "Dietary characteristics during the current pregnancy:"
+  },
+  {
+   "fieldname": "ironfolic_acid_supplementation",
+   "fieldtype": "Select",
+   "label": "Iron/folic acid supplementation",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "vegetables",
+   "fieldtype": "Select",
+   "label": "Vegetables",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.vegetables == \"Yes\";",
+   "fieldname": "regularity_vegetables",
+   "fieldtype": "Select",
+   "label": "Regularity ",
+   "mandatory_depends_on": "eval:doc.vegetables == \"Yes\";",
+   "options": "\nRegular\nIrregular",
+   "read_only_depends_on": "eval:doc.vegetables != \"Yes\";"
+  },
+  {
+   "fieldname": "fruits",
+   "fieldtype": "Select",
+   "label": "Fruits",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "meat",
+   "fieldtype": "Select",
+   "label": "Meat",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.meat == \"Yes\";",
+   "fieldname": "regularity_meat",
+   "fieldtype": "Select",
+   "label": "Regularity",
+   "mandatory_depends_on": "eval:doc.meat == \"Yes\";",
+   "options": "\nRegular\nIrregular",
+   "read_only_depends_on": "eval:doc.meat != \"Yes\";"
+  },
+  {
+   "fieldname": "drinking_tea_or_coffee_with_meals_daily",
+   "fieldtype": "Select",
+   "label": "drinking tea or coffee with meals daily",
+   "options": "\nNever\nOnce\nTwice\nThree times\nMore than Three"
+  },
+  {
+   "depends_on": "eval:doc.ironfolic_acid_supplementation == \"Yes\";",
+   "fieldname": "regularity_ironfolic_acid_supplementation",
+   "fieldtype": "Select",
+   "label": "Regularity",
+   "mandatory_depends_on": "eval:doc.ironfolic_acid_supplementation == \"Yes\";",
+   "options": "\nRegular\nIrregular",
+   "read_only_depends_on": "eval:doc.ironfolic_acid_supplementation != \"Yes\";"
+  },
+  {
+   "fieldname": "html_zssm",
+   "fieldtype": "HTML",
+   "label": "header",
+   "options": "<div class=\"container mt-5\">\n  <div class=\"text-center\">\n      <h3>Prevalence and Associated Factors of Anemia among Pregnant Women in Sana\u2019a Hospitals, Yemen</h3>\n      <p class=\"lead\">A Graduation Research Submitted in Partial Fulfillment of the Requirements for the Professional Master Degree in Laboratory Hematology and Blood Bank</p>\n      <p class=\"font-weight-bold\">By</p>\n      <p class=\"font-weight-bold\">Elham Sultan Kasim Al-Wageh</p>\n      <br>\n      <p class=\"font-weight-bold\">Supervisor</p>\n      <p class=\"font-weight-bold\">Prof.Dr.Mohammed Abdulkader Al-Nuzaili</p>\n  </div>\n  <hr>\n  <div class=\"text-center\">\n    <br>\n    <h4 class=\"font-weight-bold\">Graduation Research Questionnaire</h4>\n  </div>\n</div>"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Health problems"
+  },
+  {
+   "fieldname": "has_health_problems",
+   "fieldtype": "Select",
+   "label": "Are you experiencing any health problems or complications during your current pregnancy",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "history_of_abortion",
+   "fieldtype": "Select",
+   "label": "History of abortion",
+   "options": "\nNever\nOnce\nTwice\nThree times\nMore than Three"
+  },
+  {
+   "fieldname": "bleeding_on_current_pregnant",
+   "fieldtype": "Select",
+   "label": "Bleeding on current pregnant",
+   "options": "\nYes\nNo"
+  },
+  {
+   "description": "* You can not edit this field after clicking \"Save\" ",
+   "fieldname": "number_of_sample",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Number of sample",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Questionnaire",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_0",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.fruits == \"Yes\";",
+   "fieldname": "regularity_fruits",
+   "fieldtype": "Select",
+   "label": "Regularity",
+   "mandatory_depends_on": "eval:doc.fruits == \"Yes\";",
+   "options": "\nRegular\nIrregular",
+   "read_only_depends_on": "eval:doc.fruits != \"Yes\";"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-07-06 01:51:03.180616",
+ "modified_by": "Administrator",
+ "module": "Research Questionnaire",
+ "name": "Questionnaire",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
