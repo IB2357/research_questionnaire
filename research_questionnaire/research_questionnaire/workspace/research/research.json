@@ -2,10 +2,10 @@
  "charts": [
   {
    "chart_name": "Lab Results",
-   "label": "Lab Results"
+   "label": "Lab Results (AVG)"
   }
  ],
- "content": "[{\"id\":\"VPNIK0Wche\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Research</span>\",\"col\":12}},{\"id\":\"0TIpwOG811\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Lab Results\",\"col\":12}},{\"id\":\"f6dgf0UhX2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"tYMVShZPcj\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Basic</b></span>\",\"col\":6}},{\"id\":\"YH6BW7DGgU\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports <br></b></span>\",\"col\":6}},{\"id\":\"F55A5a5SWa\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Forms\",\"col\":6}},{\"id\":\"5rEZ2AQpmv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Questionnaire Report\",\"col\":6}},{\"id\":\"4dMhVhCFO_\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"wepsite forms\",\"col\":6}},{\"id\":\"WoatC4pExE\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Lab Results (AVG) Report\",\"col\":6}}]",
+ "content": "[{\"id\":\"VPNIK0Wche\",\"type\":\"header\",\"data\":{\"text\":\"Research\",\"col\":12}},{\"id\":\"f6dgf0UhX2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"xTF56A4rSq\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Lab Results (AVG)\",\"col\":12}},{\"id\":\"tYMVShZPcj\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Basic</b></span>\",\"col\":6}},{\"id\":\"YH6BW7DGgU\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports <br></b></span>\",\"col\":6}},{\"id\":\"F55A5a5SWa\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Forms\",\"col\":6}},{\"id\":\"5rEZ2AQpmv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Questionnaire Report\",\"col\":6}},{\"id\":\"4dMhVhCFO_\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"wepsite forms\",\"col\":6}},{\"id\":\"WoatC4pExE\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Lab Results (AVG) Report\",\"col\":6}}]",
  "creation": "2024-07-07 00:37:54.280270",
  "custom_blocks": [],
  "docstatus": 0,
@@ -18,7 +18,7 @@
  "is_hidden": 0,
  "label": "Research",
  "links": [],
- "modified": "2024-07-07 03:55:12.137161",
+ "modified": "2024-07-07 05:06:30.878782",
  "modified_by": "Administrator",
  "module": "Research Questionnaire",
  "name": "Research",

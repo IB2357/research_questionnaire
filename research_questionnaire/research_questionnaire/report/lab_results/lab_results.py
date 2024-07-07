@@ -7,10 +7,11 @@ from frappe import _
 def execute(filters=None):
     columns, data = [], []
     
-    x_field = filters.get("x_field")  # Default to 'age' if no filter is provided
+    group_by = filters.get("group_by", "age")  # Default to 'age' if no filter is provided
     
+    # Define columns for the report table
     columns = [
-        {"fieldname": x_field, "label": _(x_field.capitalize()), "fieldtype": "Data", "width": 150},
+        {"fieldname": group_by, "label": _(group_by.capitalize()), "fieldtype": "Data", "width": 150},
         {"fieldname": "count", "label": _("Count"), "fieldtype": "Int", "width": 100},
         {"fieldname": "hb", "label": _("HB (g/dl)"), "fieldtype": "Float", "width": 100},
         {"fieldname": "pcv", "label": _("PCV (%)"), "fieldtype": "Float", "width": 100},
@@ -23,9 +24,10 @@ def execute(filters=None):
         {"fieldname": "rdw", "label": _("RDW"), "fieldtype": "Float", "width": 100},
     ]
     
+    # Fetch data for the report table
     data = frappe.db.sql(f"""
         SELECT 
-            CASE WHEN {x_field}='' THEN 'Not Specified' ELSE {x_field} END,
+            CASE WHEN {group_by}='' THEN 'Not Specified' ELSE {group_by} END,
             COUNT(*) as count,
             AVG(hb),
             AVG(pcv),
@@ -39,7 +41,36 @@ def execute(filters=None):
         FROM 
             `tabQuestionnaire`
         GROUP BY 
-            {x_field}
+            {group_by}
     """)
     
-    return columns, data
+    # Fetch chart data based on the same query
+    chart_data = get_chart_data(data, group_by, filters)
+
+    return columns, data, None, chart_data
+
+def get_chart_data(data, group_by, filters):
+    if not data:
+        return {}
+
+    labels = [row[0] for row in data]  # Extract labels from the first column of data
+    y_fields = ["count", "hb", "pcv", "rbc", "wbc", "plt", "mcv", "mch", "mchc", "rdw"]
+    
+    datasets = []
+    for y_field in y_fields:
+        values = [row[y_fields.index(y_field) + 1] for row in data]
+        datasets.append({
+            "name": _(y_field.upper()),
+            "values": values,
+        })
+
+    # Prepare chart data structure
+    chart_data = {
+        "data": {
+            "labels": labels,
+            "datasets": datasets,
+        },
+        "type": "bar",
+    }
+
+    return chart_data

@@ -1,27 +1,25 @@
 {
+ "based_on": "",
  "chart_name": "Lab Results",
  "chart_type": "Report",
- "creation": "2024-07-07 02:31:36.202634",
- "custom_options": "{\"x_field\": \"age\", \"chart_type\": \"Bar\", \"y_axis_fields\": [{\"idx\": 1, \"__islocal\": true, \"name\": \"row 1\", \"y_field\": \"count\"}, {\"idx\": 2, \"__islocal\": true, \"name\": \"row 2\", \"y_field\": \"hb\"}, {\"idx\": 3, \"__islocal\": true, \"name\": \"row 3\", \"y_field\": \"pcv\"}, {\"idx\": 4, \"__islocal\": true, \"name\": \"row 4\", \"y_field\": \"rbc\"}, {\"idx\": 5, \"__islocal\": true, \"name\": \"row 5\", \"y_field\": \"wbc\"}, {\"idx\": 6, \"__islocal\": true, \"name\": \"row 6\", \"y_field\": \"plt\"}, {\"idx\": 7, \"__islocal\": true, \"name\": \"row 7\", \"y_field\": \"mcv\"}, {\"idx\": 8, \"__islocal\": true, \"name\": \"row 8\", \"y_field\": \"mch\"}, {\"idx\": 9, \"__islocal\": true, \"name\": \"row 9\", \"y_field\": \"mchc\"}, {\"idx\": 10, \"__islocal\": true, \"name\": \"row 10\", \"y_field\": \"rdw\"}], \"y_fields\": [\"count\", \"hb\", \"pcv\", \"rbc\", \"wbc\", \"plt\", \"mcv\", \"mch\", \"mchc\", \"rdw\"], \"colors\": [null, null, null, null, null, null, null, null, null, null]}",
+ "creation": "2024-07-07 05:01:12.062579",
  "docstatus": 0,
  "doctype": "Dashboard Chart",
  "dynamic_filters_json": "{}",
- "filters_json": "{\"x_field\":\"age\"}",
+ "filters_json": "{\"group_by\":\"age\"}",
  "group_by_type": "Count",
- "idx": 1,
+ "idx": 0,
  "is_public": 0,
  "is_standard": 1,
- "modified": "2024-07-07 03:25:02.287581",
+ "modified": "2024-07-07 05:03:08.707612",
  "modified_by": "Administrator",
  "module": "Research Questionnaire",
  "name": "Lab Results",
  "number_of_groups": 0,
  "owner": "Administrator",
+ "parent_document_type": "",
  "report_name": "Lab Results",
  "roles": [
-  {
-   "role": "Administrator"
-  },
   {
    "role": "System Manager"
   },
@@ -29,42 +27,13 @@
    "role": "Researcher"
   }
  ],
+ "source": "",
  "time_interval": "Yearly",
  "timeseries": 0,
  "timespan": "Last Year",
  "type": "Bar",
- "use_report_chart": 0,
- "x_field": "age",
- "y_axis": [
-  {
-   "y_field": "count"
-  },
-  {
-   "y_field": "hb"
-  },
-  {
-   "y_field": "pcv"
-  },
-  {
-   "y_field": "rbc"
-  },
-  {
-   "y_field": "wbc"
-  },
-  {
-   "y_field": "plt"
-  },
-  {
-   "y_field": "mcv"
-  },
-  {
-   "y_field": "mch"
-  },
-  {
-   "y_field": "mchc"
-  },
-  {
-   "y_field": "rdw"
-  }
- ]
+ "use_report_chart": 1,
+ "value_based_on": "",
+ "x_field": "",
+ "y_axis": []
 }
