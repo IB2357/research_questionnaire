@@ -6,22 +6,25 @@
  "docstatus": 0,
  "doctype": "Report",
  "filters": [],
- "idx": 0,
+ "idx": 5,
  "is_standard": "Yes",
  "letterhead": null,
- "modified": "2024-07-07 01:11:14.214310",
+ "modified": "2024-07-07 03:37:23.075474",
  "modified_by": "Administrator",
  "module": "Research Questionnaire",
  "name": "Questionnaire Report",
  "owner": "Administrator",
  "prepared_report": 0,
- "query": "SELECT \n    name AS \"Number of Sample\", \n    CASE docstatus\n        WHEN 0 THEN 'Draft'\n        WHEN 1 THEN 'Submitted' \n    END AS `Document Status`,\n    \n    hb AS \"HB\", \n    pcv AS \"PCV\", \n    rbc AS \"RBC\", \n    wbc AS \"WBC\", \n    plt AS \"Plt\", \n    mcv AS \"MCV\", \n    mch AS \"MCH\", \n    mchc AS \"MCHC\", \n    rdw AS \"RDW\", \n    age AS \"Age\", \n\n    residence AS \"Residence\", \n    occupation AS \"Occupation\", \n    income_average_monthly AS \"Income average monthly\", \n    number_of_children AS \"Number of children\", \n    gestational_age AS \"Gestational age\", \n    spacing_between_pregnancies AS \"Spacing between pregnancies\", \n    has_health_problems AS \"has health problems\", \n    history_of_abortion AS \"History of abortion\", \n    bleeding_on_current_pregnant AS \"Bleeding on current pregnant\", \n\n    CASE WHEN ironfolic_acid_supplementation = 'Yes' THEN regularity_ironfolic_acid_supplementation ELSE ironfolic_acid_supplementation END AS \"Iron/folic acid supplementation\", \n    CASE WHEN vegetables = 'Yes' THEN regularity_vegetables ELSE vegetables END AS \"Vegetables\", \n    CASE WHEN fruits = 'Yes' THEN regularity_fruits ELSE fruits END AS \"Fruits\", \n    CASE WHEN meat = 'Yes' THEN regularity_meat ELSE meat END AS \"Meat\", \n\n    drinking_tea_or_coffee_with_meals_daily AS \"Drinking tea or coffee with meals daily\",\n    1 AS count\nFROM \n    `tabQuestionnaire`\nWHERE\n    docstatus != 2\n",
+ "query": "SELECT \n    name AS \"Number of Sample\", \n    CASE docstatus\n        WHEN 0 THEN 'Draft'\n        WHEN 1 THEN 'Submitted' \n    END AS `Document Status`,\n    \n    hb AS \"HB\", \n    pcv AS \"PCV\", \n    rbc AS \"RBC\", \n    wbc AS \"WBC\", \n    plt AS \"Plt\", \n    mcv AS \"MCV\", \n    mch AS \"MCH\", \n    mchc AS \"MCHC\", \n    rdw AS \"RDW\", \n    \n    age AS \"Age\",  \n    residence AS \"Residence\", \n    occupation AS \"Occupation\", \n    income_average_monthly AS \"Income average monthly\", \n    number_of_children AS \"Number of children\", \n    gestational_age AS \"Gestational age\", \n    spacing_between_pregnancies AS \"Spacing between pregnancies\", \n    has_health_problems AS \"has health problems\", \n    history_of_abortion AS \"History of abortion\", \n    bleeding_on_current_pregnant AS \"Bleeding on current pregnant\", \n\n    CASE WHEN ironfolic_acid_supplementation = 'Yes' THEN regularity_ironfolic_acid_supplementation ELSE ironfolic_acid_supplementation END AS \"Iron/folic acid supplementation\", \n    CASE WHEN vegetables = 'Yes' THEN regularity_vegetables ELSE vegetables END AS \"Vegetables\", \n    CASE WHEN fruits = 'Yes' THEN regularity_fruits ELSE fruits END AS \"Fruits\", \n    CASE WHEN meat = 'Yes' THEN regularity_meat ELSE meat END AS \"Meat\", \n\n    drinking_tea_or_coffee_with_meals_daily AS \"Drinking tea or coffee with meals daily\",\n    1 AS count\nFROM \n    `tabQuestionnaire`\nWHERE\n    docstatus != 2\n",
  "ref_doctype": "Questionnaire",
  "report_name": "Questionnaire Report",
  "report_type": "Query Report",
  "roles": [
   {
    "role": "System Manager"
+  },
+  {
+   "role": "Researcher"
   }
  ]
 }
